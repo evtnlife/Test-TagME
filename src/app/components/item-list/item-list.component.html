@@ -1,0 +1,28 @@
+<!-- src/app/components/item-list/item-list.component.html -->
+<div class="container">
+    <h1>Lista de Itens</h1>
+    <div class="actions">
+      <input
+        type="text"
+        placeholder="Pesquisar..."
+        [(ngModel)]="searchTerm"
+        (input)="applyFilter()"
+      />
+      <a routerLink="/create" class="btn btn-primary">Adicionar Novo Item</a>
+    </div>
+    <hr/>
+    <div class="item-list">
+      <div class="item-card" *ngFor="let item of filteredItems">
+        <img [src]="item.imageUrl" alt="Item Image" />
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.description }}</p>
+        <div class="item-actions">
+          <a [routerLink]="['/detail', item.id]" class="btn btn-info">Detalhes</a>
+          <a [routerLink]="['/edit', item.id]" class="btn btn-warning">Editar</a>
+          <button (click)="deleteItem(item.id!)" class="btn btn-danger">
+            Excluir
+          </button>
+        </div>
+      </div>
+    </div>
+</div>

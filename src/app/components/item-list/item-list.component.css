@@ -1,0 +1,36 @@
+/* src/app/components/item-list/item-list.component.css */
+.container {
+    padding: 20px;
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .item-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .item-card {
+    width: calc(33.333% - 20px);
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+  
+  .item-card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .item-actions {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  

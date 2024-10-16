@@ -1,0 +1,15 @@
+/* src/app/components/item-detail/item-detail.component.css */
+.container {
+    padding: 20px;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+  }
+  
+  .actions {
+    margin-top: 20px;
+  }
+  

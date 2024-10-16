@@ -1,0 +1,13 @@
+<!-- src/app/components/item-detail/item-detail.component.html -->
+<div class="container" *ngIf="item">
+	<div class="text-center">
+		<h1>{{ item.title }}</h1>
+		<img [src]="item.imageUrl" alt="Item Image" />
+		<p>{{ item.description }}</p>
+		<div class="actions">
+			<a [routerLink]="['/edit', item.id]" class="btn btn-warning">Editar</a>
+			<button (click)="deleteItem()" class="btn btn-danger">Excluir</button>
+			<a routerLink="/" class="btn btn-secondary">Voltar</a>
+		</div>
+	</div>
+</div>
